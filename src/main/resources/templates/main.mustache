@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="email" placeholder="Email">
+        <button type="submit">ADD</button>
+    </form>
+</div>
+<div>Users</div>
+{{#users}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{name}}</span>
+        <i>{{email}}</i>
+    </div>
+{{/users}}
+</body>
+</html>
