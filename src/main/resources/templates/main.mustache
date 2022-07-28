@@ -1,13 +1,25 @@
 <!DOCTYPE HTML>
 <body>
 <div>
+    <form action="logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
     <form method="post">
         <input type="text" name="name" placeholder="Name"/>
         <input type="text" name="email" placeholder="Email"/>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         <button type="submit">ADD</button>
     </form>
 </div>
 <div>Users</div>
+<form method="post" action="filter">
+    <input type="text" name="filter"/>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button type="submit">Find</button>
+</form>
 {{#users}}
     <div>
         <b>{{id}}</b>

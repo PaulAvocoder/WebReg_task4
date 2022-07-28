@@ -16,14 +16,12 @@ public class GreetingController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-                           Map<String, Object> model) {
-        model.put("name", name);
+    @GetMapping()
+    public String greeting(Map<String, Object> model) {
         return "greeting";
     }
 
-    @GetMapping
+    @GetMapping("/main")
     public String main(Map<String, Object> model) {
         Iterable<User> users = userRepository.findAll();
         model.put("users", users);
@@ -36,6 +34,18 @@ public class GreetingController {
         userRepository.save(user);
 
         Iterable<User> users = userRepository.findAll();
+        model.put("users", users);
+        return "main";
+    }
+
+    @PostMapping("filter")
+    public String filter(@RequestParam String filter, Map<String, Object> model) {
+        Iterable<User> users;
+        if (filter != null && !filter.isEmpty()) {
+            users = userRepository.findByName(filter);
+        } else {
+            users = userRepository.findAll();
+        }
         model.put("users", users);
         return "main";
     }
