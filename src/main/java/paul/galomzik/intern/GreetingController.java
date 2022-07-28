@@ -1,7 +1,7 @@
 package paul.galomzik.intern;
 
-import maria.pikus.ItransitionTask4.Entity.User;
-import maria.pikus.ItransitionTask4.Repositoty.UserRepository;
+import paul.galomzik.intern.Entity.User;
+import paul.galomzik.intern.Repositoty.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

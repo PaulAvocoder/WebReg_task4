@@ -1,6 +1,6 @@
-package maria.pikus.ItransitionTask4.Repositoty;
+package paul.galomzik.intern.Repositoty;
 
-import maria.pikus.ItransitionTask4.Entity.User;
+import paul.galomzik.intern.Entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, Long> {

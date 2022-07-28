@@ -1,4 +1,4 @@
-package maria.pikus.ItransitionTask4.Entity;
+package paul.galomzik.intern.Entity;
 
 import javax.persistence.*;
 
