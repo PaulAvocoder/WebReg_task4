@@ -1,4 +1,4 @@
-package maria.pikus.ItransitionTask4;
+package paul.galomzik.intern;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

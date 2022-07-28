@@ -1,4 +1,4 @@
-package maria.pikus.ItransitionTask4;
+package paul.galomzik.intern;
 
 import maria.pikus.ItransitionTask4.Entity.User;
 import maria.pikus.ItransitionTask4.Repositoty.UserRepository;
